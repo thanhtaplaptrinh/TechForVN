@@ -225,17 +225,18 @@
     <footer>
       <img src="footer.png" alt="" height="400px" width="100%">
     </footer>
-    <script>
-      let currentIndex = 0;
+<script>
+  let currentIndex = 0;
 
-      function moveSlide(direction) {
-        const carouselImages = document.getElementById("carousel-images");
-        const totalImages = carouselImages.children.length;
+  function moveSlide(direction) {
+    const carouselImages = document.getElementById("carousel-images");
+    const totalImages = carouselImages.children.length;
 
-        currentIndex = (currentIndex + direction + totalImages) % totalImages;
-        const offset = -currentIndex * 100;
-        carouselImages.style.transform = translateX(${offset}%);
-      }
-    </script>
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
+    carouselImages.style.transform = `translateX(${offset}%)`;
+  }
+</script>
+
   </body>
 </html>
